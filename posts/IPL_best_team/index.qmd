@@ -1,7 +1,7 @@
 ---
 title: "Does the best team win the Indian Premier League ?"
 subtitle: "A simple Bayesian analysis to check if the best team wins the league reveals a rather surprising result."
-author: "Aditya"
+author: "Aditya Ranade"
 date: "2024-02-29"
 date-modified: last-modified
 categories: [analysis]
