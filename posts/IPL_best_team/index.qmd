@@ -5,7 +5,7 @@ author: "Aditya Ranade"
 date: "2024-02-29"
 date-modified: last-modified
 categories: [analysis]
-image: "pos1.png"
+image: "playoff_structure.png"
 ---
 
 ::: {style="text-align: justify"}
