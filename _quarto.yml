@@ -13,7 +13,7 @@ website:
         href: https://www.linkedin.com/in/aditya-ranade-a3944349
 format:
   html:
-    theme: cosmo
+    theme: sketchy
     css: styles.css
 
 editor: visual
