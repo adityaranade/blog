@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 <p>We can observe, the team which tops the league stage has won the tournament only three 3 of 11 times which corresponds to approximately 27.27%. However, this is just the observation from 11 years so cannot be considered as the best indicator of probability. We will consider a Bayesian statistical model to calculate the probability of the team finishing the tournament as winner, runners up and third place.</p>
 <p>In simple terms, a Bayesian model is reconciliation of our belief ( ‘prior’ distribution) with the observed data (likelihood) to give the updated belief (‘posterior’ distribution). Here the information (prior, likelihood and posterior) is in the form of mathematical distribution functions.</p>
 <p>If we consider the random variable ‘result’ which indicates the position of the team at the end of the tournament. The team which finishes the league stage at the top of the table can finish at any position from 1 to 3 at the end of the tournament where 1 stands for winner, 2 stands for runner’s up and 3 stands for 3rd place. Since the variable can take only 1 out of the 3 values, it follows a categorical distribution which is denoted as result ~ categorical(<span class="math inline">\(p_{1}, p_{2}, p_{3}\)</span>) where <span class="math inline">\(p_{1}\)</span>, <span class="math inline">\(p_{2}\)</span> and <span class="math inline">\(p_{3}\)</span> indicates the probability of finishing at each of the position at the end of the tournament.</p>
-<p>We will consider the probabilities as a random variable as well. We have to assign a distribution to the variable in such a way that our beliefs are reflected in the distribution. We will consider the team has an equal chance at finishing at each of the positions. This ensured by assigning a Dirichlet(1,1,1) distribution to (<span class="math inline">\(p_{1}\)</span>, <span class="math inline">\(p_{2}\)</span>, <span class="math inline">\(p_{3}\)</span>)</p>
+<p>We will consider the probabilities as a random variable as well. We have to assign a distribution to the variable in such a way that our beliefs are reflected in the distribution. We will consider the team has an equal chance at finishing at each of the positions. This is ensured by assigning a Dirichlet(1,1,1) distribution to (<span class="math inline">\(p_{1}\)</span>, <span class="math inline">\(p_{2}\)</span>, <span class="math inline">\(p_{3}\)</span>)</p>
 <p>So the model is as follows</p>
 <p><span class="math display">\[result \overset{\mathrm{i.i.d.}}{\sim} Categorical(p_{1}, p_{2}, p_{3}) \]</span></p>
 <p><span class="math display">\[(p_{1}, p_{2}, p_{3}) \sim Dirichlet(\alpha_{1}, \alpha_{2}, \alpha_{3}) \]</span></p>
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">Credible intervals for probabilities for team finishing second during league stage</figcaption>
 </figure>
 </div>
-<p>We can see the probability of being winner is higher than the probability of finishing as runner’s up or 3rd place. This means the team finishing second in the league stage will more often go on to win the tournament. Surely a surprising result!</p>
+<p>We can see the probability of being winner is higher than the probability of finishing as runner’s up or 3rd place. This means the team finishing second in the league stage will more often go on to win the tournament. Surely a surprising and fascinating result!</p>
 </div>
 
 
