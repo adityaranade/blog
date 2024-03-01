@@ -155,7 +155,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Indian Premier League is an annual cricket league which is played under the T20 format. It was started in the year 2008 and has quickly gained popularity among cricket playing nations and has probably become one of the biggest sporting event in the Indian sports calendar.</p>
+<div style="text-align: justify">
+<p>Indian Premier League (IPL) is an annual cricket league which is played under the T20 format. It was started in the year 2008 and has quickly gained popularity among cricket playing nations and has probably become one of the biggest sporting event in the Indian sports calendar.</p>
 <p>The tournament is played between various teams based out of different cities in India. IPL is currently in its 14th season where the tournament has been played with 8 teams from 2008 - 2010 and 2014-2021. It was played with 10 teams in 2011 and 9 teams in 2012 and 2013. From 2022, it has been expanded again to 10 teams.</p>
 <p>The tournament followed a double round-robin format from 2008 - 2021 (except for the year 2011) where each team plays the other team twice (once at each team’s ‘home’ ground). From the year 2022, the teams are divided into two groups and every team plays 14 games (twice against the teams in the same group, twice against one team from other group and once against the other teams from the other group). At the conclusion of the league stage, the top four teams qualify for the playoffs. For the first 3 years (2008-2010), the traditional semifinals and final approach was considered. From 2011, a playoff structure was introduced to award the top two teams with an additional chance to reach the finals. This ensured the competition stays relevant till the last game of the league stage as teams vie for top 2 position. The figure below explains the playoff structure.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -164,6 +165,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">IPL Playoff Structure</figcaption>
 </figure>
 </div>
+<p>IPL Playoff Structure</p>
 <p>The top two teams of the league stage have two chances to reach the final. The thought behind this playoff structure was that the top two teams should not be out of the tournament due to one bad day in the semi-finals.</p>
 <p>A question that pops up in the mind is “Does the best team win the tournament”. In other words, does the team which finishes the league stage at the top of the table have the best chance to win the league. The team which finishes the league stage position 1 has won the most number of points (and in case of tied points, has a superior net run rate) and hence is considered the “best” team in the league. We would be tempted to say yes. But let’s find out what the data says.</p>
 <p>We have the data available for 11 years (2011 - 2021) for the league stage standings and the playoff results for the team topping the league stage from IPL official website which can be seen below</p>
@@ -184,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pos1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Probabilities for team finishing first during the league stage</figcaption>
+<figcaption class="figure-caption">Credible intervals for probabilities for team finishing first during league stage</figcaption>
 </figure>
 </div>
 <p>The horizontal line indicates the plausible values for the probability of team finishing in a particular position and black point indicates the estimated value of the probability from the available data and model used.</p>
@@ -195,10 +197,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pos2.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Probabilities for team finishing second during the league stage</figcaption>
+<figcaption class="figure-caption">Credible intervals for probabilities for team finishing second during league stage</figcaption>
 </figure>
 </div>
 <p>We can see the probability of being winner is higher than the probability of finishing as runner’s up or 3rd place. This means the team finishing second in the league stage will more often go on to win the tournament. Surely a surprising result!</p>
+</div>
 
 
 
