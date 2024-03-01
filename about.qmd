@@ -12,8 +12,4 @@ about:
       href: https://github.com
 ---
 
-Hello! My name is Aditya Ranade and I am a PhD student at Department of Statistics, Iowa State University.
-
-About this blog
-
-I mostly write about some fun stuff here like sports analytics (cricket) here.
+Hello! My name is Aditya Ranade and I am a PhD student at Department of Statistics, Iowa State University. I write about fun stuff here mostly sports analytics (cricket) here.
