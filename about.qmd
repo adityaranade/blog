@@ -6,10 +6,12 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/aditya-ranade-a3944349/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/adityaranade
 ---
 
-Hello! My name is Aditya Ranade and I am a PhD student at Department of Statistics, Iowa State University. I write about fun stuff here mostly sports analytics (cricket) here.
+Hello! My name is Aditya Ranade and I am a PhD student at Department of Statistics, Iowa State University.
+
+I write about fun stuff here mostly sports analytics (cricket) here.
