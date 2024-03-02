@@ -14,4 +14,4 @@ about:
 
 Hello! My name is Aditya Ranade and I am a PhD student at Department of Statistics, Iowa State University.
 
-I write about fun stuff here mostly sports analytics (cricket) here.
+I write about fun stuff here mostly sports analytics (cricket).
