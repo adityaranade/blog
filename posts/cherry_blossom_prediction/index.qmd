@@ -1,0 +1,94 @@
+---
+title: "Cherry Blossom prediction using Time Series"
+subtitle: "A time series analysis to forecast 2024 cherry blossom bloom date"
+author: "Aditya Ranade"
+date: "2024-03-01"
+date-modified: last-modified
+categories: [analysis]
+image: "cherry_blossom.jpg"
+---
+
+::: {style="text-align: justify"}
+Cherry Blossom is one of the most scenic visuals one can experience. In the recent past, cherry blossom season marks the arrival of spring season which can be considered as a transition from winter to summer. People try to make plans travel to enjoy this phenomenon. So how about using some simple statistical techniques to try and forecast / predict the peak cherry blossom time ?
+:::
+
+::: {style="text-align: justify"}
+Along with some of my fellow PhD classmates, I participated in the International Cherry Blossom Prediction Competition hosted by George Mason university. We explored a lot of models and I am going to show a very basic model which I tried during the early stages. The model is the Autogegressive (AR) model. The notation of the simplest AR model, namely AR(1) model is as follows
+:::
+
+$$
+Y_{t} = \beta_{1} Y_{t-1} + \epsilon_{t}
+$$
+
+where $\beta_{i}$ is the model parameter and $\epsilon_{t}$ is the white noise
+
+::: {style="text-align: justify"}
+This means the value of random variable Y at time t depends on the value of the same variable at time (t-1). If you are aware of the simple linear regression, think of this as the explanatory variable being the same as the predictor variable in rough sense. In the competition, we tried to predict the bloom date for multiple location across the world based on the data available provide by the university. However, for the purpose of this post, I will show the analysis only for one location, Kyoto in Japan.
+:::
+
+::: {style="text-align: justify"}
+Let us start with first reading in the dataset and loading the R packages required for the analysis
+:::
+
+```{r}
+#| echo: false
+#| label: load-packages
+#| warning: false
+#| include: false
+
+library(forecast)
+library(ggplot2)
+library(fpp2)
+library(dplyr)
+library(vars)
+```
+
+```{r}
+#| label: load-data
+#| warning: false
+#| include: false
+#| echo: false
+
+# Load the packages
+
+# library(forecast)
+# library(ggplot2)
+# library(fpp2)
+# library(dplyr)
+# library(vars)
+
+# Load the dataset
+kyoto <- read.csv("https://raw.githubusercontent.com/GMU-CherryBlossomCompetition/peak-bloom-prediction/main/data/kyoto.csv",header=T)
+
+# Plot of the bloom date over the years
+ggplot(kyoto,aes(x=year,y=bloom_doy))+
+  geom_point()+
+  theme_minimal()+
+  labs(x="Year",y="Bloom Day")+
+  ggtitle("Bloom Day by Year")
+
+```
+
+::: {style="text-align: justify"}
+As we can see from the plot, towards the later end which means in the recent past, the bloom day has started to go down. Let us look at the plot only from the year 1900 oneards
+:::
+
+```{r}
+#| label: filter-data
+#| warning: false
+#| include: false
+#| echo: false
+
+# Filter data only for year since 1900
+kyoto_new <- kyoto %>% filter(year>=1900)
+head(kyoto_new)
+
+
+# Plot of the bloom date over the years
+ggplot(kyoto_new,aes(x=year,y=bloom_doy))+
+  geom_point()+
+  theme_minimal()+
+  labs(x="Year",y="Bloom Day")+
+  ggtitle("Bloom Day by Year")
+
+```
