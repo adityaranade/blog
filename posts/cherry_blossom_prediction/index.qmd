@@ -47,7 +47,6 @@ kyoto <- read.csv("https://raw.githubusercontent.com/GMU-CherryBlossomCompetitio
 # Plot of the bloom date over the years
 ggplot(kyoto,aes(x=year,y=bloom_doy))+
   geom_point()+
-  theme_minimal()+
   labs(x="Year",y="Bloom Day")+
   ggtitle("Bloom Day by Year")
 ```
@@ -69,7 +68,6 @@ kyoto_new <- kyoto %>% filter(year>1950)
 # Plot of the bloom date over the years
 ggplot(kyoto_new,aes(x=year,y=bloom_doy))+
   geom_point()+
-  theme_minimal()+
   labs(x="Year",y="Bloom Day")+
   ggtitle("Bloom Day by Year")
 
